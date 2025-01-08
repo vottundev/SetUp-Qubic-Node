@@ -354,7 +354,7 @@ Now, when starting the VM with VirtualBox GUI for visual monitoring, and executi
 
 Another error is also observed: Latest tick created tick = 4'294'967'293, this is an incorrect format. According to Kavatak, I need to set my server clock to UTC to avoid this issue.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/69ab3b94-51f9-4928-b4d8-23c772248bcd.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/edit/main/setupimg/69ab3b94-51f9-4928-b4d8-23c772248bcd.png)
 
 This error was resolved by using the following commands from the server terminal. To set the clock to UTC+00 timezone: `sudo timedatectl set-timezone UTC` and to display the set date and time, the command `sudo timedatectl` was used.
 
