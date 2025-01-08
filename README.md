@@ -23,13 +23,13 @@ To run a [qubic node](https://github.com/qubic/core) you need a computer with th
 
 Additionally, to install the virtual machine where the node will run, you must have a computer with Ubuntu 22.04 operating system, amd64, with 64GB of RAM and a static IP. Therefore, a 'Dedicated Server EX44', which meets all requirements.
 
-![Hetzner Robot Dashboard. Ordering panel for product selection.](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image.png)
+![Hetzner Robot Dashboard. Ordering panel for product selection.](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image.png)
 
 Hetzner Robot Dashboard. Ordering panel for product selection.
 
 In my case, the server IP is 95.216.15.174 and my user is root.
 
-![Hetzner Robot Dashboard. Server Panel, detail view in the 'IP' tab of the server IP and MAC.](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%201.png)
+![Hetzner Robot Dashboard. Server Panel, detail view in the 'IP' tab of the server IP and MAC.](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image1.png)
 
 Hetzner Robot Dashboard. Server Panel, detail view in the 'IP' tab of the server IP and MAC.
 
@@ -47,7 +47,7 @@ I didn't configure any password for this key and saved the file with the name **
 
 The text that appears should be copied into the 'Public Key' text container, accept the data loss conditions, and apply the server installation/configuration.
 
-![Hetzner Robot Dashboard. Server Panel, detail view in the Linux tab, where for the first time you can select the OS configuration, language and public key for the SSH connection. ](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%202.png)
+![Hetzner Robot Dashboard. Server Panel, detail view in the Linux tab, where for the first time you can select the OS configuration, language and public key for the SSH connection. ](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image2.png)
 
 Hetzner Robot Dashboard. Server Panel, detail view in the Linux tab, where for the first time you can select the OS configuration, language and public key for the SSH connection. 
 
@@ -61,7 +61,7 @@ Therefore, to connect to the server from my PC via ssh, you only need to execute
 
 **Note:** When I've had to reset the server because it crashed and I could no longer connect to it, I had to apply '**Execute an automatic hardware reset**' and then reinstall Linux, directly loading the 'Public key' that I had saved.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%203.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image3.png)
 
 Normally, after this reset, when trying to connect to the server using: `ssh -i ~/./hetzner_server_ssh [root@95.216.15.174](mailto:root@95.216.15.174)` the following warning appears:
 
@@ -169,17 +169,17 @@ Afterwards, we create a password using the command: `vncpasswd`
 
 To run TigerViewer, simply execute the command: `vncviewer` in the local machine's terminal, and enter the server's IP. After clicking 'Connect' it will request a password, if it was configured during installation. In my case, the password is: **123456QV**.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%204.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image4.png)
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%205.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image5.png)
 
 This will display the following interface. Actually, you can change the screen resolution by specifying the parameters when starting the server, using the command `vncserver -geometry 1920x1080`, but it's not essential.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%206.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image6.png)
 
 Right now, all the files needed to configure and launch the node in the virtual machine are located in /root/, as shown in the image. 
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%207.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image7.png)
 
 ### 2.4. VirtualBox Installation on the Server
 
@@ -246,53 +246,53 @@ VBoxManage startvm "QUBIC" --type gui
 
 Even so, the above methodology is discouraged, and it is better to do it through the interface. Therefore, one way to open the GUI is to directly open the terminal from VirtualBox VMs>Open in Terminal.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%208.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image8.png)
 
 And this will open a terminal where using the startup command `virtualbox` launches the GUI.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%209.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image9.png)
 
 As shown in the image, to create a new VM click on the 'New' button.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2010.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image10.png)
 
 Assign a name and select Linux as operating system, with Oracle Linux (64-bit) version.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2011.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image11.png)
 
 We must also select at least 60gb of RAM (as it is at the limit of acceptable/valid) for the maximum of 64gb. And at least 8 CPU nodes.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2012.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image12.png)
 
 Select 'Do not add a virtual hard disk'.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2013.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image13.png)
 
 And confirm the configuration. Once done, we can select the VM from the left pane, click on the 'Settings' button and review the configuration or modify it.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2014.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image14.png)
 
 We must ensure that the 'Enable EFI (special OSes only)' feature is active. To do this, go to Settings>System>Motherboard.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2015.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image15.png)
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2016.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image16.png)
 
 Now, we configure the port of the node, so that it executes the testnet. Therefore, we navigate to Settings>Network>Adapter 1. We deploy 'Advanced' and, firstly, we verify that the 'Adapter_Type' selected is Paravirtualized Network (virtio-net). Secondly, clicking on the 'Port Forwarding' button opens the 'Port Forwarding Rules' window where you can add a new rule, example: Rule 1, with TCP protocol and both host and guest port will be 31844. 
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2017.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image17.png)
 
 As for the load file, we navigate to Settings>Storage and in the storage devices, selecting 'Controller: IDE' we can click on the 'Add hard disk' button.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2018.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image18.png)
 
 This opens a window of the computer's file directory, in which we can browse for the location of 'qubic.vhd' and add it. 
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2019.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image19.png)
 
 Finally, save all the changes with the 'Ok' button and run the machine with the 'Start' button. If everything is correct, you will initially see the following information in the console, and after 5 seconds it will go black. This is correct. We have to make a partition, load a new qubic.efi, the node data and execute a command to activate the 'Qubic network' when the node is launched, to get the network running. We see this in detail in the next section.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2020.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image20.png)
 
 ## 3. Proper Configuration of the Qubic Node and Qubic Network
 
@@ -322,7 +322,7 @@ Next, we connect the VHD file:
 At this point, we can verify the qubic contents with the command: `ls /mnt/qubic`
 You should see something like this:
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2021.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image21.png)
 
 We will replace the Qubic.efi file and all old files with the contents of folder 136. Therefore, first we delete all old files, making sure not to delete the /efi/boot/ folder:
 
@@ -338,7 +338,7 @@ And we copy the Qubic.efi file to its path:
 
 Finally, if we check the folder contents again, it should be visible with the command: `ls -lh /mnt/qubic`
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2022.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image22.png)
 
 ### 3.3. **VHD Unmounting**
 
@@ -373,11 +373,11 @@ To resolve the node-network issue, we need to follow these steps.
 
 With all this, the 'Qubic network' should launch correctly.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2024.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image24.png)
 
 To finish, it is enough to close the vm to stop the execution of the node as well.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2025.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image25.png)
 
 ## 4. Connecting to Qubic Testnet through VM (without having to configure it, just using it)
 
@@ -387,39 +387,39 @@ To finish, it is enough to close the vm to stop the execution of the node as wel
 
 It should indicate port +1 or +2 (New 'X' desktop is Ubuntu-2404-noble-amd64-base:1', in this case it's 1. If it shows 2, or any higher value, it might be because we haven't closed the previous connection (vncserver -kill:1).
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2026.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image26.png)
 
 **Step 3.** In a new terminal on the local PC, start TigerViewer with the command: `vncviewer`.
 
 This will open a window to confirm the connection with the server by verifying IP and port (in our case, 1). If everything is correct, click **'Connect'** and in the following 'VNCauthentication' window enter the password: **123456QV** and click **'OK'**.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2027.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image27.png)
 
 **Step 4.** The VHD needs to be reconfigured, as it cannot contain the scores, system files (or debug, in case it was generated) when launching the node. Therefore, it is recommended to **perform the steps defined in subsection 5.3**, except for step 3 if a new Qubic.efi is not needed. If the VHD is not cleaned, the node will fail.
 
 **Step 5.** To open the VM from the server interface, we open a new terminal from the **folder > VirtualBox VMs > Open in Te**
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%208.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image8.png)
 
 **Step 6**. When a terminal opens, we use the startup command `virtualbox` to launch the VM with GUI.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%209.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image9.png)
 
 **Step 7**. As shown in the image, to execute the node and run the Qubic network, we must select **'QUBICbridge'** in the left panel and click the '**Start**' button.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2028.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image28.png)
 
 **Step 8**. Once the network is launched, we must press 'F12' 3 times until switching to 'MAIN&MAIN' mode, as it starts in aux&aux by default. And each time we press it, we change modes
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2029.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image29.png)
 
 **Step 9.** Next we must load the indices with the command `./broadcastComputorTestnet 95.216.15.174 136 31844`
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2030.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image30.png)
 
 And if everything goes well, we should see how the indices parameter shows the text 'Owning 676 indices' and the ticks advance. In the following screenshot, you can see how it went from tick 17420011 to 17420012. (The initialization of this tick was defined in the Qubic.efi compilation at 17420000)
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2031.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image31.png)
 
 ## 5. Qubic.efi Compilation and SC Deployment on Qubic Testnet
 
@@ -487,7 +487,7 @@ Se debe configurar el puerto en el cual se iniciará el nodo. En este caso, se e
         
         ```
         
-        ![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2032.png)
+        ![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image32.png)
         
         We need to replace the example IP address with the node's IP address (95, 216, 15, 174) and the echo server (45, 143, 199, 16), and add some more. Ideally 4, but I used 3.
         
@@ -512,13 +512,13 @@ This means that our contract corresponds to **index 11**. When deployed, our con
 
 Now we simply need to make sure we configure the build in **Release** and **x64** and click the **'LocalWindows Debugger'** button (or ctrl+B). If there are no errors, a pop-up will appear like the one shown in the second image, which is just a warning that the application cannot be launched, but the Qubic.efi file has been compiled successfully.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2033.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image33.png)
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2034.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image34.png)
 
 So, let's look for this file in our project folder: core/x64/Release/Qubic.efi
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2035.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image35.png)
 
 In my case, I replace this Qubic.efi in the Google Drive folder so I know I can download it on any machine through its link.
 
@@ -536,9 +536,9 @@ To do this, I make sure the node is turned off to remount the vhd. These are bas
 5. Note: before launching the node again, we must delete the score*, system* files, and if a debug.log was generated, we delete that too: `sudo rm -rf /mnt/qubic/score*  /mnt/qubic/system*`
 6. We finish and release the vhd: `sudo umount /mnt/qubicsudo losetup -d /dev/loop0`
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2036.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image36.png)
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2037.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image37.png)
 
 5.4. Using Qubic-cli as an intermediary to read network events
 
@@ -553,7 +553,7 @@ Quick explanation to clarify. qubic-cli is basically a command-line tool that si
 
 [https://github.com/qubic/qubic-cli/](https://github.com/qubic/qubic-cli/)
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2038.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image38.png)
 
 ## 6. Interaction with the SC
 
@@ -577,7 +577,7 @@ Note: To exit the terminal editor, press shift+W, enter, shift+X.
 
 From this point, we can interact with either the node itself or directly with the smart contract. Example of interaction with the node, reading the current tick: `curl [http://127.0.0.1:80/v1/tick-info](http://127.0.0.1/v1/tick-info)`
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2039.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image39.png)
 
 **Important**: Any write operation that requires calling an sc function involves creating a transaction. Any read operation requires calling the query endpoint in qubic-http.
 
@@ -596,7 +596,7 @@ curl -X 'POST' \
 }'
 ```
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2040.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image40.png)
 
 Example to read 'getAdminID' which has as input parameter a uint8 (any value is valid, I pass 0.
 
@@ -615,12 +615,12 @@ curl -X 'POST' \
 
 By default, it is initialized to address 0. A default address must be set at initialization.
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2041.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image41.png)
 
 To execute transactions, you can use the accounts that are in [message_publicID.txt](https://drive.google.com/file/d/1i55D5u7rWNHBpxBcKAuIkNVpXV7FnrzW/view?usp=drive_link) with their private key for signing, which can be found in the file [message_privatekey](https://drive.google.com/file/d/1AkLR1_kwRe3O2UJ84wgJBeJXmJyi1qLD/view?usp=sharing).
 
 In this example, I passed the first ID from 'message_publicID' as the ID from which the transaction will be signed (and in line 62 of the example, the corresponding private key must be passed, which is the first one from the corresponding 'message_privatekey'). Destination ID is always the contract address (ours is index 11) and adminID would be the new address that we want to set as admin (I took the second publicID from the txt).
 
-![image.png](Qubic%20Node%20-%20VM%20-%20SetUp%20ENGLISH%201745532b965980378d01f2abc64738e2/image%2042.png)
+![image.png](https://github.com/vottundev/SetUp-Qubic-Node/blob/main/setupimg/image42.png)
 
 Using qubic-cli you can check if the transaction has been included in the block (tick), in this case, the transaction has been found.
